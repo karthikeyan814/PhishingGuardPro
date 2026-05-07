@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: phishguard-pro
+    runtime: python
+    buildCommand: "pip install -r requirements.txt && python train_model.py"
+    startCommand: "python app.py"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: PORT
+        value: 5000
